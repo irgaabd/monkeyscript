@@ -1,0 +1,28 @@
+// ==UserScript==
+// @name        forumidws
+// @namespace   forum.indowebster.com
+// @include     http://forum.indowebster.com/*
+// @require     http://code.jquery.com/jquery-1.11.2.min.js
+// @grant       none
+// ==/UserScript==
+
+$('div#header div').children('a.logo-image').hide();
+$('div#header').find('div.ad_global_header').hide();
+$('div#GlobalBelowNavbarAd').hide();
+$('form#notices').detach().appendTo('ol#forums');
+$('div#cboxdiv').empty().parent('div').hide().prev().hide();
+$('div#wgo_stats').hide();//.detach().appendTo('ol#forums')
+$('div#wgo').hide();//.detach().appendTo('div#wgostats')
+$('div#CPC_HomeAd').hide();
+$('div#FooterAd').hide();
+$('li#cat4').detach().prependTo('ol#forums');
+$('li#cat150').detach().prependTo('ol#forums');
+$('li#cat8').detach().prependTo('ol#forums');
+$('li#cat75').detach().prependTo('ol#forums');
+$('div#ShowthreadHeaderAd').hide();
+$('div#pagetitle').hide();
+$('ol#announcements div.announcement').children('a').hide().next().hide();
+$('div[id*=INNITYINNERDIV]').empty().hide();
+//navbar
+$('ul#navtabs li#tab_nda3_871').children('a.navtab').attr('href','/showthread.php?t=427594').text('west idx');
+$('ul#navtabs li#tab_nda3_402').children('a.navtab').attr('href','/showthread.php?t=310168').text('scripted idx');
